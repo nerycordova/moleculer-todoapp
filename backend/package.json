@@ -4,7 +4,7 @@
   "description": "My Moleculer-based microservices project",
   "scripts": {
     "dev": "moleculer-runner --repl --hot services/**/*.service.js --envfile config/dev.env",
-    "start": "moleculer-runner",
+    "start": "moleculer-runner --envfile config/prod.env",
     "cli": "moleculer connect NATS",
     "ci": "jest --watch",
     "test": "env-cmd -f ./config/test.env jest --coverage --watch --runInBand",
