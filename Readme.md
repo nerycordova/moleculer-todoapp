@@ -59,7 +59,7 @@ MONGODB_URL=<your mongo url pointing to test db> # for example: MONGODB_URL=mong
 
 ### Running docker containers
 
-The above instructions basically run the application in a monolitic way. To run independent nodes per service, Moleculer includes a handy script that creates a docker containier per service. To deploy the containers, simply run:
+The above instructions basically run the application in a monolitic way. To run independent nodes per service, Moleculer includes a handy script that creates a docker container per service. To deploy the containers, `cd` into the `backend` folder and simply run:
 
 `npm run dc:up`
 
