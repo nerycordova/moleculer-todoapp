@@ -9,6 +9,7 @@
 * MongoDB
 * Mongoose
 * Moleculer
+* Node.js
 * Docker
 
 ## Application architecture
