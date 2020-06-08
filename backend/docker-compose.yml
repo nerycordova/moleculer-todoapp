@@ -6,6 +6,7 @@ services:
     build:
       context: .
     image: backend
+    container_name: moleculer-todoapp-api
     env_file: docker-compose.env
     environment:
       SERVICES: api
@@ -19,13 +20,14 @@ services:
     networks:
       - internal
 
-  greeter:
+  users:
     build:
       context: .
     image: backend
+    container_name: moleculer-todoapp-users
     env_file: docker-compose.env
     environment:
-      SERVICES: greeter
+      SERVICES: users
     depends_on:
       - nats
     networks:

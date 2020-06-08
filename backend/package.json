@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "My Moleculer-based microservices project",
   "scripts": {
-    "dev": "moleculer-runner --repl --hot services/**/*.service.js",
+    "dev": "moleculer-runner --repl --hot services/**/*.service.js --envfile config/dev.env",
     "start": "moleculer-runner",
     "cli": "moleculer connect NATS",
     "ci": "jest --watch",
-    "test": "jest --coverage",
+    "test": "env-cmd -f ./config/test.env jest --coverage --watch --runInBand",
     "lint": "eslint services",
     "dc:up": "docker-compose up --build -d",
     "dc:logs": "docker-compose logs -f",
@@ -25,9 +25,14 @@
     "moleculer-repl": "^0.6.2"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "env-cmd": "^10.1.0",
+    "moleculer": "^0.14.0",
+    "moleculer-db": "^0.8.8",
+    "moleculer-db-adapter-mongoose": "^0.8.5",
     "moleculer-web": "^0.9.0",
-    "nats": "^1.3.2",
-    "moleculer": "^0.14.0"
+    "mongoose": "^5.9.18",
+    "nats": "^1.3.2"
   },
   "engines": {
     "node": ">= 10.x.x"
