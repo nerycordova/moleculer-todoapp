@@ -15,13 +15,20 @@ module.exports = {
 	// More info about settings: https://moleculer.services/docs/0.14/moleculer-web.html
 	settings: {
 		// Exposed port
-		port: process.env.PORT || 3000,
+		port: process.env.PORT || 4000,
 
 		// Exposed IP
 		ip: "0.0.0.0",
 
 		// Global Express middlewares. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Middlewares
 		use: [],
+
+		cors: {
+			origin: "*",
+			methods: ["GET", "OPTIONS", "POST", "PATCH", "DELETE"],
+			credentials: false,
+			maxAge: 3600
+		},
 
 		routes: [
 			{
