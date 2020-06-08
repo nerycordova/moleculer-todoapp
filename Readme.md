@@ -5,6 +5,7 @@
 ## Technology Stack
 
 * React.js
+* Material-UI
 * MongoDB
 * Mongoose
 * Moleculer
