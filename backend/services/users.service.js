@@ -16,7 +16,7 @@ module.exports = {
 
 	mixins: [DbService],
 
-	adapter: new MongooseAdapter(process.env.MONGODB_URL_USERS_SERVICE , { useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true }),
+	adapter: new MongooseAdapter(process.env.MONGODB_URL , { useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true }),
 
 	model: User,
 
@@ -50,7 +50,6 @@ module.exports = {
 				name: "string"
 			},
 			async handler(ctx) {
-				//return `Create user: ${.name}`;
 				const user = new User(ctx.params);
 
 				await user.save();
@@ -69,6 +68,7 @@ module.exports = {
 				path: "/:id"
 			},
 			async handler(ctx){
+				
 				const user = await User.findOne({_id:ctx.params.id});
 				if (!user) throw new Error("Entity not found");
 				return user;
@@ -131,6 +131,7 @@ module.exports = {
 				path: "/"
 			},
 			async handler(){
+				
 				return await User.find();
 			}
 		}
