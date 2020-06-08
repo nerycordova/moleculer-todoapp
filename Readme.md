@@ -14,7 +14,7 @@
 
 ## Application architecture
 
-Working with Moleculer makes it super easy to deploy a scalable microservices architecture. This application is built as show in the following diagram:
+Working with Moleculer makes it super easy to deploy a scalable microservices architecture. This application is built as shown in the following diagram:
 
 ![Architecture](./docs/architecture.png)
 
@@ -57,9 +57,9 @@ MONGODB_URL=<your mongo url pointing to test db> # for example: MONGODB_URL=mong
 
 3. Now, go back to `backend` folder and run `npm run test`
 
-### Running docker containers
+## Running docker containers
 
-The above instructions basically run the application in a monolitic way. To run independent nodes per service, Moleculer includes a handy script that creates a docker container per service. To deploy the containers, `cd` into the `backend` folder and simply run:
+The above instructions basically run the backend in a monolitic way. To run independent nodes per service, Moleculer includes a handy script that creates a docker container per service. To deploy the containers, `cd` into the `backend` folder and simply run:
 
 `npm run dc:up`
 
