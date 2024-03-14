@@ -1,7 +1,5 @@
 # ToDo App - A microservices demo using Moleculer framework for Node.js
 
-[Click here](http://nery.tech/moleculer-todoapp/) to see a live demo of this application.
-
 ## Technology Stack
 
 * React.js
